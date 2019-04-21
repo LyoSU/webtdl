@@ -22,14 +22,12 @@ async function tdlInvoke(method, parm) {
 }
 
 fastify.all('/:method', async (request, reply) => {
-  const invoke = await tdlInvoke(request.params.method, {
-    username: request.query.username,
-  })
+  const invoke = await tdlInvoke(request.params.method, request.query)
 
   reply.send(invoke)
 })
 
-fastify.listen(3000, (err, address) => {
+fastify.listen(8085, (err, address) => {
   if (err) throw err
   console.log(`server tdl starting on ${address}`)
 })
