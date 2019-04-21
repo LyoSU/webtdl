@@ -1,0 +1,31 @@
+{
+  "name": "webtdl",
+  "version": "0.0.1",
+  "description": "web wrapper on tdlib",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "node_modules/.bin/eslint --ext js .",
+    "lint:fix": "node_modules/.bin/eslint --fix --ext js ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LyoSU/webtdl.git"
+  },
+  "author": "LyoSU",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LyoSU/webtdl/issues"
+  },
+  "homepage": "https://github.com/LyoSU/webtdl",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "fastify": "^2.3.0",
+    "tdl": "^5.2.0"
+  },
+  "devDependencies": {
+    "@atomix/eslint-config": "^6.4.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.0"
+  }
+}
