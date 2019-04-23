@@ -22,7 +22,8 @@ async function tdlInvoke(method, parm) {
 }
 
 fastify.all('/:method', async (request, reply) => {
-  const invoke = await tdlInvoke(request.params.method, request.query)
+  const parm = Object.assign(request.body || {}, request.query || {})
+  const invoke = await tdlInvoke(request.params.method, parm)
 
   reply.send(invoke)
 })
