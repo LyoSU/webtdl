@@ -27,7 +27,7 @@ fastify.all('/:method', async (request, reply) => {
   reply.send(invoke)
 })
 
-fastify.listen(8085, (err, address) => {
+fastify.listen(8085, '0.0.0.0', (err, address) => {
   if (err) throw err
   console.log(`server tdl starting on ${address}`)
 })
